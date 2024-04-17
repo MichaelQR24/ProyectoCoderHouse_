@@ -1,0 +1,861 @@
+$base-color: #1d3557;
+$secondary-color: #144AD3;
+$text-color: white;
+$font-family: "Titillium Web", sans-serif;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; 
+}
+
+h1 {
+  color: $base-color;
+}
+
+ul {
+  font-family: $font-family;
+  list-style-type: none;
+  background-color: $secondary-color;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 50%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  border-radius: 20px;
+}
+
+li {
+  float: left; 
+}
+
+li a {
+  display: block;
+  color: $text-color;
+  text-align: center;
+  padding: 30px 30px;
+  text-decoration: none;
+}
+
+li a:hover {
+  background-color: $base-color;
+}
+
+footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background-color: #07205F;
+  height: 50px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  border-radius: 20px;
+}
+
+footer h3 {
+  font-family: $font-family;
+  color: $text-color;
+  margin: 0;
+}
+/*  ----------INICIO-----------  */
+$primary-color: #0D152B;
+$secondary-color: #161A6C;
+$text-color: white;
+
+#pagina_inicio_contenedor {
+  width: 100%; 
+  height: 800px; 
+  background-color: $primary-color;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+#pagina_inicio_contenedor_titulo {
+  width: 90%; 
+  max-width: 630px; 
+  margin: 45px auto 18px;
+  height: auto;
+  background-color: $secondary-color;
+  color: $text-color;
+  font-size: 24px; 
+  padding: 27px; 
+  border-radius: 25px;
+}
+
+#pagina_inicio_contenedor_contenido {
+  width: 90%; 
+  max-width: 900px; 
+  margin: 18px auto 45px;
+  height: auto;
+  background-color: $secondary-color;
+  color: $text-color;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 135px; 
+  font-size: 22px; 
+  border-radius: 25px;
+}
+
+#pagina_inicio_contenedor_contenido img {
+  width: 70%; 
+  border-radius: 50%;
+}
+
+#pagina_inicio_contenedor_contenido p {
+  width: 36%; 
+  display: flex;
+  align-items: center;
+  font-size: 22px; 
+}
+
+#pagina_inicio p {
+  text-align: center;
+  background-color: #07205F;
+  color: $text-color;
+}
+
+#Body_De_Inicio {
+  background-color: $primary-color;
+}
+/*------------------------HABILIDADES--------------------------------------*/
+$background-color-dark: #0D152B;
+$background-color-medium: #161A6C;
+$background-color-light: #2C3088;
+$text-color: white;
+$border-radius-general: 25px;
+
+#pagina_habilidades {
+    
+    padding: 50px;
+
+    &_titulo {
+      margin: 20px;
+        width: 97%;
+        height: 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: $background-color-medium;
+        color: $text-color;
+        text-align: center;
+        border-radius: $border-radius-general;
+    }
+
+    #pagina_cuadro {
+      margin-top: 80px; 
+      width: 90%; 
+      display: grid;
+      grid-template-columns: repeat(4, auto);
+      background-color: $background-color-light;
+      padding: 20px;
+      margin: 0 auto; 
+      border-radius: $border-radius-general;
+    }
+}
+
+.grupo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px; 
+}
+
+.grupo img {
+  width: 10px;
+}
+
+.grupo a {
+  color: $text-color;
+  text-align: center; 
+}
+#pagina_habilidades._contenido.curso {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 80%;
+  width: 80%;
+  height: auto;
+  margin: 10px auto;
+  text-align: center;
+}
+.grupo {
+  flex-direction: column; 
+}
+
+.grupo img {
+  width: 100px;
+  
+}
+
+.grupo a {
+  display: grid;
+  margin-top: 10px;
+  text-align: center; 
+}
+
+
+#Body_De_habilidades {
+    background-color: $background-color-dark;
+}
+/* -----------formacion--------------  */
+$course-bg-color: #161A6C; 
+$course-text-color: white; 
+$base-bg-color: #0D152B; 
+
+#Body_De_Formacion {
+  background-color: $base-bg-color;
+
+}
+
+#pagina_formacion_contenedor_titulo {
+  font-size: 24px;
+  color: white;
+  width: 100%;
+  height: 40px;
+  padding-top: 10px; 
+  text-align: center;
+  margin-bottom: 30px; 
+}
+
+#pagina_formacion_contenedor_estudios {
+  width: 80%; 
+  margin: 0 auto;
+  background-color: $base-bg-color;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start; 
+  align-items: center;
+  gap: 20px; 
+}
+
+.curso {
+  background-color: $course-bg-color;
+  padding: 20px; 
+  border-radius: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  max-width: 80%;
+  width: 600px;
+  height: auto; 
+  margin: 20px auto; 
+  color: $course-text-color;
+  font-size: 20px;
+  text-align: left;
+
+  img {
+    margin-bottom: 20px;
+    max-width: 100%; 
+  }
+}
+
+#upn, #udemy {
+  background-color: $course-bg-color; 
+  padding: 20px;
+  border-radius: 40px;
+  text-align: center;
+  color: white;
+  margin-bottom: 40px;
+  width: 80%;
+  max-width: 600px;
+  align-self: center; 
+}
+
+$experience-bg-color: #0D152B; 
+$text-color: white; 
+
+/* Pagina Experiencia */
+
+#Body_De_Experiencia {
+  background-color: $experience-bg-color;
+  color: $text-color; 
+}
+
+#pagina_experiencia_titulo {
+  background-color: $experience-bg-color;
+  color: $text-color;
+  width: 100%;
+  height: 60px;
+  padding-top: 10px;
+  text-align: center;
+  font-size: 24px;
+  margin-bottom: 30px;
+  font-weight: bold; 
+}
+
+#pagina_experiencia_contenedor {
+  width: 80%;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-gap: 30px;
+  justify-content: center;
+  align-items: center;
+}
+
+#pagina_experiencia_contenedor > div {
+  background-color: #2C3088;
+  padding: 20px;
+  border-radius: 25px;
+  text-align: center;
+  color: $text-color; 
+}
+
+#pagina_experiencia_contenedor h2,
+#pagina_experiencia_contenedor p,
+#cuadro p,
+#cuadro-interior-mas-chico p,
+#cuadro-interior-mas-chico h2 { 
+  color: $text-color;
+  font-family: "Titillium Web", sans-serif;
+  font-weight: bold;
+  margin: 0;
+}
+
+#cuadro img {
+  width: 150px;
+  margin: 0;
+  border: 5px solid #2C3088;
+}
+
+#cuadro-interior {
+  background-color: #2C3088;
+  padding: 100px;
+}
+
+#cuadro-interior-mas-chico {
+  background-color: #221667;
+  padding: 20px;
+  border-radius: 20px;
+}
+
+
+/*  -------CONTACTO--------- */
+$primary-color: #0D152B; 
+$secondary-color: #464C63; 
+$text-color: white; 
+
+/* Pagina Contacto */
+
+#Body_De_contacto {
+  background-color: $primary-color;
+  color: $text-color;
+}
+
+#pagina_contacto_titulo_parrafo,
+#pagina_contacto_titulo {
+  font-size: 24px;
+  text-align: center;
+  color: $text-color;
+}
+
+#pagina_contacto_titulo {
+  background-color: $primary-color;
+  width: 100%;
+  height: 60px;
+  padding-top: 10px;
+}
+
+#pagina_contenedor_contacto {
+  width: 80%;
+  background-color: $secondary-color;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 40px auto;
+  border-radius: 25px;
+}
+
+#formularioContacto {
+  width: 80%;
+  margin: 40px auto;
+}
+
+#formularioContacto div {
+  margin-bottom: 30px;
+}
+
+#formularioContacto label {
+  display: block;
+  margin-bottom: 10px;
+}
+
+#formularioContacto input[type="email"],
+#formularioContacto textarea {
+  width: 100%;
+  padding: 10px;
+  box-sizing: border-box;
+  border: none;
+  border-radius: 5px;
+}
+
+#formularioContacto input[type="submit"] {
+  background-color: $primary-color;
+  color: $text-color;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+} 
+
+
+
+@media screen and (max-width: 320px) {
+  nav {
+    ul {
+        flex-direction: column;
+        align-items: center;
+
+        li {
+            a {
+                font-size: calc(20px * 0.7); 
+                padding: 8px 12px;
+            }
+        }
+    }
+}
+#pagina_inicio_contenedor_contenido {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+  .pagina_formacion_contenedor_estudios {
+      width: 100%;
+  }
+
+  .curso {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      max-width: 80%;
+      width: 50%;
+      height: auto;
+      margin: 10px auto;
+      text-align: center;
+  }
+
+  ul {
+      flex-direction: column;
+  }
+
+  #pagina_inicio {
+      width: 100%;
+  }
+
+  #pagina_inicio_contenedor {
+      width: 100%;
+      height: auto;
+      background-color: #0D152B;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      &_titulo {
+          width: 80%;
+          margin: 50px auto 20px;
+          height: auto;
+          background-color: #161A6C;
+          color: white;
+          font-size: 22px;
+          padding: 20px;
+          border-radius: 25px;
+      }
+
+      &_contenido {
+          width: 90%;
+          height: 650px;
+          background-color: #161A6C;
+          color: white;
+          display: flex;
+          flex-direction: column;
+          justify-content: space-around;
+          align-items: center;
+          padding: 0;
+          font-size: 22px;
+          border-radius: 25px;
+
+          img {
+              width: 90%;
+          }
+
+          p {
+              width: 80%;
+          }
+      }
+  }
+
+  footer {
+      width: 100%;
+
+      h3 {
+          font-size: 15px;
+      }
+  }
+  #pagina_cuadro {
+    width: 100%;
+    display: grid;
+    gap: 10px; 
+    padding: 10px; 
+    border-radius: $border-radius-general;
+  }
+  .grupo img {
+    width: 40px; 
+  }
+  #pagina_habilidades {
+      padding: 30px;
+  
+      &_titulo {
+        margin: 30px auto;
+        width: 70%;
+        height: 60px;
+        justify-content: center;
+        align-items: center;
+        background-color: $background-color-medium;
+        color: $text-color;
+        text-align: center;
+        border-radius: $border-radius-general;
+        font-size: 18px; 
+      }
+  
+      #pagina_cuadro {
+        margin-top: 30px;
+        width: 90%;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr); 
+        gap: 15px;
+        background-color: $background-color-light;
+        padding: 15px;
+        justify-content: center;
+        border-radius: $border-radius-general;
+      }
+    }
+  
+    .grupo {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+  
+      img {
+        width: 40px; 
+      }
+  
+      a {
+        font-size: 14px;
+        text-align: center;
+        display: block;
+      }
+    }
+}
+
+
+  @media screen and (min-width: 321px) and (max-width: 576px) {
+    .pagina_formacion_contenedor_estudios {
+      width: 100%;
+    }
+    nav {
+      ul {
+          flex-direction: column;
+          align-items: center;
+  
+          li {
+              a {
+                  font-size: calc(20px * 0.7); 
+                  padding: 8px 12px;
+              }
+          }
+      }
+  }
+    .curso {
+      width: 50%;
+      margin: 50px auto 20px;
+      height: auto;
+      font-size: 22px;
+      padding: 20px;
+      border-radius: 25px;
+      text-align: center;
+    }
+  
+    ul {
+      flex-direction: column;
+    }
+  
+    #pagina_inicio {
+      width: 100%;
+    }
+  
+    #pagina_inicio_contenedor {
+      width: 100%;
+      height: auto;
+      background-color: #0D152B;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    #pagina_inicio_contenedor_titulo {
+      width: 80%;
+      margin: 50px auto 20px;
+      height: auto;
+      background-color: #161A6C;
+      color: white;
+      font-size: 22px;
+      padding: 20px;
+      border-radius: 25px;
+    }
+  
+    #pagina_inicio_contenedor_contenido {
+      width: 90%;
+      height: 650px;
+      background-color: #161A6C;
+      color: white;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      align-items: center;
+      padding: 0;
+      font-size: 22px;
+      border-radius: 25px;
+    }
+  
+    #pagina_inicio_contenedor_contenido img {
+      width: 90%;
+    }
+  
+    #pagina_inicio_contenedor_contenido p {
+      width: 80%;
+    }
+  
+    footer {
+      width: 100%;
+    }
+  
+    footer h3 {
+      font-size: 15px;
+    }
+  
+    #pagina_cuadro {
+      grid-template-columns: repeat(2, 1fr); 
+      gap: 10px;
+      padding: 50%;
+    }
+  
+    .grupo {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+  
+    .grupo img {
+      width: 80px; 
+    }
+  
+    .grupo a {
+      text-align: center;
+    }
+
+    #pagina_habilidades {
+      padding: 30px;
+  
+      &_titulo {
+        margin: 30px auto;
+        width: 70%;
+        height: 60px;
+        justify-content: center;
+        align-items: center;
+        background-color: $background-color-medium;
+        color: $text-color;
+        text-align: center;
+        border-radius: $border-radius-general;
+        font-size: 18px; 
+      }
+  
+      #pagina_cuadro {
+        margin-top: 30px;
+        width: 90%;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr); 
+        gap: 15px;
+        background-color: $background-color-light;
+        padding: 15px;
+        justify-content: center;
+        border-radius: $border-radius-general;
+      }
+    }
+  
+    .grupo {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+  
+      img {
+        width: 80px; 
+      }
+  
+      a {
+        font-size: 14px;
+        text-align: center;
+        display: block;
+      }
+    }
+  }
+
+  @media screen and (min-width: 577px) and (max-width: 768px) {
+    .pagina_formacion_contenedor_estudios {
+      width: 100%;
+    }
+    
+    nav {
+      ul {
+          flex-direction: column;
+          align-items: center;
+  
+          li {
+              a {
+                  font-size: calc(20px * 0.7);
+                  padding: 8px 12px;
+              }
+          }
+      }
+  }
+    .curso {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      max-width: 80%;
+      width: 80%;
+      height: auto;
+      margin: 10px auto;
+      text-align: center;
+    }
+  
+    ul {
+      flex-direction: column;
+    }
+  
+    #pagina_inicio {
+      width: 100%;
+    }
+  
+    #pagina_inicio_contenedor {
+      width: 100%;
+      height: auto;
+      background-color: #0D152B;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    #pagina_inicio_contenedor_titulo {
+      width: 80%;
+      margin: 50px auto 20px;
+      height: auto;
+      background-color: #161A6C;
+      color: white;
+      font-size: 22px;
+      padding: 20px;
+      border-radius: 25px;
+    }
+  
+    #pagina_inicio_contenedor_contenido {
+      width: 90%;
+      height: 750px;
+      background-color: #161A6C;
+      color: white;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      align-items: center;
+      padding: 0;
+      font-size: 22px;
+      border-radius: 25px;
+    }
+  
+    #pagina_inicio_contenedor_contenido img {
+      width: 90%;
+    }
+  
+    #pagina_inicio_contenedor_contenido p {
+      width: 80%;
+    }
+  
+    footer {
+      width: 100%;
+    }
+  
+    footer h3 {
+      font-size: 15px;
+    }
+  
+    #pagina_cuadro {
+      grid-template-columns: repeat(3, 1fr); 
+    }
+  
+    .grupo img {
+      width: 100px; 
+    }
+    #pagina_habilidades {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    #pagina_habilidades._titulo {
+      width: 80%;
+      margin: 50px auto 20px;
+      height: auto;
+      background-color: #161A6C;
+      color: white;
+      font-size: 22px;
+      padding: 20px;
+      border-radius: 25px;
+    }
+    #pagina_habilidades._contenido {
+      width: 90%;
+      height: 750px;
+      background-color: #161A6C;
+      color: white;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      align-items: center;
+      padding: 0;
+      font-size: 22px;
+      border-radius: 25px;
+    }
+    #pagina_habilidades._contenido.curso {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      max-width: 80%;
+      width: 80%;
+      height: auto;
+      margin: 10px auto;
+      text-align: center;
+    }
+    .grupo {
+      flex-direction: column; 
+    }
+  
+    .grupo img {
+      width: 80%;
+    }
+  
+    .grupo a {
+      display: block; 
+      margin-top: 10px; 
+      text-align: center; 
+    }
+  }
