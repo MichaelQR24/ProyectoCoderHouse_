@@ -73,8 +73,8 @@ footer h3 {
 
 #pagina_inicio_contenedor_contenido {
   width: 90%;
-  max-width: 900px;
-  margin: 18px auto 45px;
+  max-width: 800px;
+  margin: 18px auto 70px;
   height: auto;
   background-color: #161A6C;
   color: white;
@@ -434,7 +434,33 @@ footer h3 {
   #cuadro-interior {
     padding: 20px; }
   #cuadro-interior-mas-chico {
-    padding: 10px; } }
+    padding: 10px; }
+  #pagina_contacto_titulo {
+    font-size: 20px;
+    height: 40px;
+    padding-top: 5px; }
+  #pagina_contenedor_contacto {
+    width: 95%;
+    margin: 20px auto;
+    padding: 10px; }
+  #formularioContacto {
+    width: 100%;
+    margin: 20px auto; }
+  #formularioContacto div {
+    margin-bottom: 15px; }
+  #formularioContacto label {
+    font-size: 14px; }
+  #formularioContacto input[type="email"],
+  #formularioContacto textarea {
+    font-size: 14px;
+    padding: 5px; }
+  #formularioContacto input[type="submit"] {
+    font-size: 14px;
+    padding: 5px 10px; }
+  footer {
+    width: 100%; }
+  footer h3 {
+    font-size: 13px; } }
 
 @media screen and (min-width: 321px) and (max-width: 576px) {
   .pagina_formacion_contenedor_estudios {
@@ -486,7 +512,7 @@ footer h3 {
     font-size: 18px;
     border-radius: 25px; }
   #pagina_inicio_contenedor_contenido img {
-    width: 90%; }
+    width: 75%; }
   #pagina_inicio_contenedor_contenido p {
     width: 50%; }
   footer {
@@ -541,7 +567,7 @@ footer h3 {
       font-size: 14px;
       text-align: center;
       display: block; }
-  /******************experiencia**********************/
+  /*******************************experiencia****************************************/
   #pagina_experiencia_contenedor {
     width: 90%;
     grid-template-columns: 1fr; }
@@ -552,9 +578,29 @@ footer h3 {
   #cuadro-interior {
     padding: 20px; }
   #cuadro-interior-mas-chico {
-    padding: 50px; }
-  #pagina_experiencia_contenedor h2 {
-    font-size: 30px; } }
+    padding: 10px; }
+  #pagina_contacto_titulo {
+    font-size: 20px;
+    height: 40px;
+    padding-top: 5px; }
+  #pagina_contenedor_contacto {
+    width: 95%;
+    margin: 20px auto;
+    padding: 10px; }
+  #formularioContacto {
+    width: 100%;
+    margin: 20px auto; }
+  #formularioContacto div {
+    margin-bottom: 15px; }
+  #formularioContacto label {
+    font-size: 14px; }
+  #formularioContacto input[type="email"],
+  #formularioContacto textarea {
+    font-size: 14px;
+    padding: 5px; }
+  #formularioContacto input[type="submit"] {
+    font-size: 14px;
+    padding: 5px 10px; } }
 
 @media screen and (min-width: 577px) and (max-width: 768px) {
   .pagina_formacion_contenedor_estudios {
@@ -596,7 +642,7 @@ footer h3 {
     padding: 20px;
     border-radius: 25px; }
   #pagina_inicio_contenedor_contenido {
-    width: 90%;
+    width: 70%;
     height: 750px;
     background-color: #161A6C;
     color: white;
@@ -608,7 +654,7 @@ footer h3 {
     font-size: 22px;
     border-radius: 25px; }
   #pagina_inicio_contenedor_contenido img {
-    width: 90%; }
+    width: 70%; }
   #pagina_inicio_contenedor_contenido p {
     width: 80%; }
   footer {
@@ -661,4 +707,41 @@ footer h3 {
   .grupo a {
     display: block;
     margin-top: 10px;
-    text-align: center; } }
+    text-align: center; }
+  /*******************************experiencia****************************************/
+  #pagina_experiencia_contenedor {
+    width: 90%;
+    grid-template-columns: 1fr; }
+  #pagina_experiencia_contenedor > div {
+    padding: 10px; }
+  #cuadro-interior {
+    padding: 50px; }
+  #cuadro-interior-mas-chico {
+    padding: 40px; }
+  #pagina_contenedor_contacto {
+    width: 90%;
+    margin: 20px auto; }
+  #formularioContacto {
+    width: 100%; }
+  #pagina_contacto_titulo {
+    font-size: 20px;
+    height: 40px;
+    padding-top: 5px; }
+  #pagina_contenedor_contacto {
+    width: 95%;
+    margin: 20px auto;
+    padding: 10px; }
+  #formularioContacto {
+    width: 100%;
+    margin: 20px auto; }
+  #formularioContacto div {
+    margin-bottom: 15px; }
+  #formularioContacto label {
+    font-size: 14px; }
+  #formularioContacto input[type="email"],
+  #formularioContacto textarea {
+    font-size: 14px;
+    padding: 5px; }
+  #formularioContacto input[type="submit"] {
+    font-size: 14px;
+    padding: 5px 10px; } }
