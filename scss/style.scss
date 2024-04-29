@@ -38,10 +38,12 @@ li a {
   text-align: center;
   padding: 30px 30px;
   text-decoration: none;
-}
+  transition: all 0.3s ease-in-out; // Agrega una transición suave
 
-li a:hover {
-  background-color: $base-color;
+  &:hover {
+    background-color: $base-color;
+    transform: scale(1.1); // Aplica una pequeña escala al pasar el cursor
+  }
 }
 
 footer {

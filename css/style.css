@@ -28,10 +28,11 @@ li a {
   color: white;
   text-align: center;
   padding: 30px 30px;
-  text-decoration: none; }
-
-li a:hover {
-  background-color: #1d3557; }
+  text-decoration: none;
+  transition: all 0.3s ease-in-out; }
+  li a:hover {
+    background-color: #1d3557;
+    transform: scale(1.1); }
 
 footer {
   position: fixed;
