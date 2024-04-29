@@ -38,11 +38,11 @@ li a {
   text-align: center;
   padding: 30px 30px;
   text-decoration: none;
-  transition: all 0.3s ease-in-out; // Agrega una transición suave
+  transition: all 0.3s ease-in-out; 
 
   &:hover {
     background-color: $base-color;
-    transform: scale(1.1); // Aplica una pequeña escala al pasar el cursor
+    transform: scale(1.1); 
   }
 }
 
@@ -94,7 +94,7 @@ $text-color: white;
 #pagina_inicio_contenedor_contenido {
   width: 90%; 
   max-width: 800px; 
-  margin: 18px auto 70px; 
+  margin: 18px auto 70px;
   height: auto; 
   background-color: $secondary-color; 
   color: $text-color; 
@@ -107,7 +107,7 @@ $text-color: white;
 }
 
 #pagina_inicio_contenedor_contenido img {
-  width: 1300px; 
+  width: 400%;
   border-radius: 50%;
 }
 
@@ -677,11 +677,11 @@ $text-color: white;
     }
   
     #pagina_inicio_contenedor_contenido img {
-      width: 75%;
+      width: 90%;
     }
   
     #pagina_inicio_contenedor_contenido p {
-      width: 50%;
+      width:90%;
     }
   
     footer {
@@ -731,13 +731,13 @@ $text-color: white;
       }
   
       #pagina_cuadro {
-        margin-top: 30px;
+        margin-top: 10px;
         width: 90%;
         display: grid;
         grid-template-columns: repeat(3, 1fr); 
         gap: 15px;
         background-color: $background-color-light;
-        padding: 15px;
+        padding: 2px;
         justify-content: center;
         border-radius: $border-radius-general;
       }
@@ -749,7 +749,7 @@ $text-color: white;
       align-items: center;
   
       img {
-        width: 70px; 
+        width: 80%; 
       }
   
       a {
@@ -758,8 +758,8 @@ $text-color: white;
         display: block;
       }
     }
- /*******************************experiencia****************************************/
- #pagina_experiencia_contenedor {
+/*******************************experiencia****************************************/
+#pagina_experiencia_contenedor {
   width: 90%;
   grid-template-columns: 1fr;
 }
@@ -890,11 +890,12 @@ $text-color: white;
 
   
     #pagina_inicio_contenedor_contenido img {
-      width: 70%;
+      width: 90%;
     }
   
     #pagina_inicio_contenedor_contenido p {
       width: 80%;
+      margin-bottom: 90px; /* Ajusta este valor según sea necesario */
     }
   
     footer {
