@@ -51,9 +51,7 @@ footer h3 {
   color: white;
   margin: 0;
   font-size: 100%;
-  /* Tamaño de fuente más pequeño */
-  text-align: center;
-  /* Texto centrado horizontalmente */ }
+  text-align: center; }
 
 /*  ----------INICIO-----------  */
 #pagina_inicio_contenedor {
