@@ -50,7 +50,7 @@ footer h3 {
   font-family: "Titillium Web", sans-serif;
   color: white;
   margin: 0;
-  font-size: 0.8em;
+  font-size: 100%;
   /* Tamaño de fuente más pequeño */
   text-align: center;
   /* Texto centrado horizontalmente */ }
