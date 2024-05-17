@@ -53,7 +53,6 @@ footer {
   background-color: #07205F;
   height: 50px;
   display: flex;
-  flex-direction: row;
   justify-content: center;
   align-items: center;
   border-radius: 20px;
@@ -63,70 +62,92 @@ footer h3 {
   font-family: $font-family;
   color: $text-color;
   margin: 0;
+  font-size: 0.8em; /* Tamaño de fuente más pequeño */
+  text-align: center; /* Texto centrado horizontalmente */
 }
+
 /*  ----------INICIO-----------  */
 $primary-color: #0D152B;
 $secondary-color: #161A6C;
 $text-color: white;
 
-#pagina_inicio_contenedor {
-  width: 100%; 
-  height: 800px; 
-  background-color: $primary-color;
+// Definición de mixins
+@mixin flexbox($direction, $justify, $align) {
   display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  align-items: center;
+  flex-direction: $direction;
+  justify-content: $justify;
+  align-items: $align;
+}
+
+@mixin bordered-box($bg-color, $color, $padding, $border-radius) {
+  background-color: $bg-color;
+  color: $color;
+  padding: $padding;
+  border-radius: $border-radius;
+}
+
+// Uso de mixins
+#pagina_inicio_contenedor {
+  width: 100%;
+  height: 800px;
+  background-color: $primary-color;
+  @include flexbox(column, space-around, center);
 }
 
 #pagina_inicio_contenedor_titulo {
-  width: 90%; 
-  max-width: 630px; 
+  width: 90%;
+  max-width: 630px;
   margin: 45px auto 18px;
-  height: auto; 
-  background-color: $secondary-color; 
-  color: $text-color; 
-  font-size: 24px; 
-  padding: 27px; 
-  border-radius: 25px; 
+  height: auto;
+  @include bordered-box($secondary-color, $text-color, 27px, 25px);
+  font-size: 24px;
 }
 
 #pagina_inicio_contenedor_contenido {
-  width: 90%; 
-  max-width: 800px; 
+  width: 90%;
+  max-width: 800px;
   margin: 18px auto 70px;
-  height: auto; 
-  background-color: $secondary-color; 
-  color: $text-color; 
-  display: flex;
-  flex-direction: row; 
-  justify-content: space-between; 
-  padding: 110px; 
-  font-size: 22px; 
-  border-radius: 25px; 
-}
+  height: auto;
+  @include bordered-box($secondary-color, $text-color, 110px, 25px);
+  @include flexbox(row, space-between, center);
+  font-size: 22px;
 
-#pagina_inicio_contenedor_contenido img {
-  width: 400%;
-  border-radius: 50%;
-}
+  img {
+    width: 400%;
+    border-radius: 50%;
+  }
 
-#pagina_inicio_contenedor_contenido p {
-  display: flex;
-  align-items: center;
-  font-size: 22px; 
+  p {
+    @include flexbox(row, center, center);
+    font-size: 22px;
+  }
 }
 
 #pagina_inicio p {
   text-align: center;
-  background-color: #07205F;
-  color: $text-color;
+  @include bordered-box(#07205F, $text-color, 0, 0);
 }
 
 #Body_De_Inicio {
   background-color: $primary-color;
 }
 /*------------------------HABILIDADES--------------------------------------*/
+// Definición de mixins
+@mixin flexbox($direction, $justify, $align) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: $justify;
+  align-items: $align;
+}
+
+@mixin bordered-box($bg-color, $color, $padding, $border-radius) {
+  background-color: $bg-color;
+  color: $color;
+  padding: $padding;
+  border-radius: $border-radius;
+}
+
+// Variables
 $background-color-dark: #0D152B;
 $background-color-medium: #161A6C;
 $background-color-light: #2C3088;
@@ -134,146 +155,163 @@ $text-color: white;
 $border-radius-general: 25px;
 
 #pagina_habilidades {
-    
-    padding: 50px;
+  padding: 50px;
 
-    &_titulo {
-      margin: 20px;
-        width: 97%;
-        height: 50px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        background-color: $background-color-medium;
-        color: $text-color;
-        text-align: center;
-        border-radius: $border-radius-general;
-    }
+  &_titulo {
+    margin: 20px;
+    width: 97%;
+    height: 50px;
+    @include flexbox(row, center, center);
+    @include bordered-box($background-color-medium, $text-color, 0, $border-radius-general);
+    text-align: center;
+  }
 
-    #pagina_cuadro {
-      margin-top: 80px; 
-      width: 90%; 
-      display: grid;
-      grid-template-columns: repeat(4, auto);
-      background-color: $background-color-light;
-      padding: 20px;
-      margin: 0 auto; 
-      border-radius: $border-radius-general;
-    }
+  #pagina_cuadro {
+    margin-top: 80px;
+    width: 90%;
+    display: grid;
+    grid-template-columns: repeat(4, auto);
+    @include bordered-box($background-color-light, inherit, 20px, $border-radius-general);
+    margin: 0 auto;
+  }
 }
 
 .grupo {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 10px; 
-  flex-direction: column; 
+  @include flexbox(column, center, center);
+  gap: 10px;
+
+  img {
+    width: 100px;
+  }
+
+  a {
+    color: $text-color;
+    text-align: center;
+    display: grid;
+    margin-top: 10px;
+    text-align: center;
+  }
 }
 
-.grupo img {
-  width: 100px;
+#pagina_habilidades {
+  &_contenido {
+    &.curso {
+      @include flexbox(row, center, center);
+      max-width: 80%;
+      width: 80%;
+      height: auto;
+      margin: 10px auto;
+      text-align: center;
+    }
+  }
 }
-
-.grupo a {
-  color: $text-color;
-  text-align: center; 
-  display: grid;
-  margin-top: 10px;
-  text-align: center; 
-}
-#pagina_habilidades._contenido.curso {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  max-width: 80%;
-  width: 80%;
-  height: auto;
-  margin: 10px auto;
-  text-align: center;
-}
-
 
 #Body_De_habilidades {
-    background-color: $background-color-dark;
+  background-color: $background-color-dark;
 }
 /* -----------formacion-------------- */
+// Definición de mixins
+@mixin flexbox($direction, $justify, $align) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: $justify;
+  align-items: $align;
+}
+
+@mixin bordered-box($bg-color, $color, $padding, $border-radius) {
+  background-color: $bg-color;
+  color: $color;
+  padding: $padding;
+  border-radius: $border-radius;
+}
+
+// Variables
 $course-bg-color: #161A6C;
 $course-text-color: white;
 $base-bg-color: #0D152B;
+$experience-bg-color: #0D152B;
+$text-color: white;
+
 #Body_De_Formacion {
-background-color: $base-bg-color;
-}
-#pagina_formacion_contenedor_titulo {
-font-size: 24px;
-color: white;
-width: 100%;
-height: 40px;
-padding-top: 10px;
-text-align: center;
-margin-bottom: 30px;
-}
-#pagina_formacion_contenedor_estudios {
-width: 80%;
-margin: 0 auto;
-background-color: $base-bg-color;
-display: flex;
-flex-direction: column;
-justify-content: flex-start;
-align-items: center;
-gap: 20px;
-}
-.curso {
-background-color: $course-bg-color;
-padding: 20px;
-border-radius: 40px;
-display: flex;
-flex-direction: column;
-justify-content: center;
-align-items: center;
-max-width: 80%;
-width: 600px;
-height: auto;
-margin: 20px auto;
-color: $course-text-color;
-font-size: 20px;
-text-align: left;
-img {
-margin-bottom: 20px;
-max-width: 100%;
-}
-}
-#upn, #udemy {
-background-color: $course-bg-color;
-padding: 20px;
-border-radius: 40px;
-text-align: center;
-color: white;
-margin-bottom: 80px;
-width: 80%;
-max-width: 600px;
-align-self: center;
+  background-color: $base-bg-color;
 }
 
-$experience-bg-color: #0D152B; 
-$text-color: white; 
+#pagina_formacion_contenedor_titulo {
+  font-size: 24px;
+  color: white;
+  width: 100%;
+  height: 40px;
+  padding-top: 10px;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+#pagina_formacion_contenedor_estudios {
+  width: 80%;
+  margin: 0 auto;
+  background-color: $base-bg-color;
+  @include flexbox(column, flex-start, center);
+  gap: 20px;
+}
+
+.curso {
+  @include bordered-box($course-bg-color, $course-text-color, 20px, 40px);
+  @include flexbox(column, center, center);
+  max-width: 80%;
+  width: 600px;
+  height: auto;
+  margin: 20px auto;
+  font-size: 20px;
+  text-align: left;
+
+  img {
+    margin-bottom: 20px;
+    max-width: 100%;
+  }
+}
+
+#upn, #udemy {
+  @include bordered-box($course-bg-color, white, 20px, 40px);
+  text-align: center;
+  margin-bottom: 80px;
+  width: 80%;
+  max-width: 600px;
+  align-self: center;
+}
 
 /* --------------Pagina Experiencia----------- */
 
+// Definición de mixins
+@mixin flexbox($direction, $justify, $align) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: $justify;
+  align-items: $align;
+}
+
+@mixin bordered-box($bg-color, $color, $padding, $border-radius) {
+  background-color: $bg-color;
+  color: $color;
+  padding: $padding;
+  border-radius: $border-radius;
+}
+
+// Variables
+$experience-bg-color: #0D152B;
+$text-color: white;
+
 #Body_De_Experiencia {
-  background-color: $experience-bg-color;
-  color: $text-color; 
+  @include bordered-box($experience-bg-color, $text-color, 0, 0);
 }
 
 #pagina_experiencia_titulo {
-  background-color: $experience-bg-color;
-  color: $text-color;
+  @include bordered-box($experience-bg-color, $text-color, 10px 0 0 0, 0);
   width: 100%;
   height: 60px;
-  padding-top: 10px;
   text-align: center;
   font-size: 24px;
   margin-bottom: 30px;
-  font-weight: bold; 
+  font-weight: bold;
 }
 
 #pagina_experiencia_contenedor {
@@ -285,21 +323,18 @@ $text-color: white;
   grid-gap: 30px;
   justify-content: center;
   align-items: center;
-}
 
-#pagina_experiencia_contenedor > div {
-  background-color: #2C3088;
-  padding: 20px;
-  border-radius: 25px;
-  text-align: center;
-  color: $text-color; 
+  > div {
+    @include bordered-box(#2C3088, $text-color, 20px, 25px);
+    text-align: center;
+  }
 }
 
 #pagina_experiencia_contenedor h2,
 #pagina_experiencia_contenedor p,
 #cuadro p,
 #cuadro-interior-mas-chico p,
-#cuadro-interior-mas-chico h2 { 
+#cuadro-interior-mas-chico h2 {
   color: $text-color;
   font-family: "Titillium Web", sans-serif;
   font-weight: bold;
@@ -313,25 +348,35 @@ $text-color: white;
 }
 
 #cuadro-interior {
-  background-color: #2C3088;
-  padding: 100px;
+  @include bordered-box(#2C3088, inherit, 100px, 0);
 }
 
 #cuadro-interior-mas-chico {
-  background-color: #221667;
-  padding: 20px;
-  border-radius: 20px;
+  @include bordered-box(#221667, inherit, 20px, 20px);
+}
+/*  -------CONTACTO--------- */
+// Definición de mixins
+@mixin flexbox($direction, $justify, $align) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: $justify;
+  align-items: $align;
 }
 
+@mixin bordered-box($bg-color, $color, $padding, $border-radius) {
+  background-color: $bg-color;
+  color: $color;
+  padding: $padding;
+  border-radius: $border-radius;
+}
 
-/*  -------CONTACTO--------- */
-$primary-color: #0D152B; 
-$secondary-color: #464C63; 
-$text-color: white; 
+// Variables
+$primary-color: #0D152B;
+$secondary-color: #464C63;
+$text-color: white;
 
 #Body_De_contacto {
-  background-color: $primary-color;
-  color: $text-color;
+  @include bordered-box($primary-color, $text-color, 0, 0);
 }
 
 #pagina_contacto_titulo_parrafo,
@@ -342,55 +387,45 @@ $text-color: white;
 }
 
 #pagina_contacto_titulo {
-  background-color: $primary-color;
+  @include bordered-box($primary-color, $text-color, 10px 0 0 0, 0);
   width: 100%;
   height: 60px;
-  padding-top: 10px;
 }
 
 #pagina_contenedor_contacto {
   width: 80%;
-  background-color: $secondary-color;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  @include bordered-box($secondary-color, inherit, 0, 25px);
+  @include flexbox(column, center, center);
   margin: 40px auto;
-  border-radius: 25px;
 }
 
 #formularioContacto {
   width: 80%;
   margin: 40px auto;
+
+  div {
+    margin-bottom: 30px;
+  }
+
+  label {
+    display: block;
+    margin-bottom: 10px;
+  }
+
+  input[type="email"],
+  textarea {
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    border: none;
+    border-radius: 5px;
+  }
+
+  input[type="submit"] {
+    @include bordered-box($primary-color, $text-color, 10px 20px, 0);
+    cursor: pointer;
+  }
 }
-
-#formularioContacto div {
-  margin-bottom: 30px;
-}
-
-#formularioContacto label {
-  display: block;
-  margin-bottom: 10px;
-}
-
-#formularioContacto input[type="email"],
-#formularioContacto textarea {
-  width: 100%;
-  padding: 10px;
-  box-sizing: border-box;
-  border: none;
-  border-radius: 5px;
-}
-
-#formularioContacto input[type="submit"] {
-  background-color: $primary-color;
-  color: $text-color;
-  border: none;
-  padding: 10px 20px;
-  cursor: pointer;
-} 
-
-
-
 @media screen and (max-width: 320px) {
   nav {
     ul {

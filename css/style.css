@@ -42,7 +42,6 @@ footer {
   background-color: #07205F;
   height: 50px;
   display: flex;
-  flex-direction: row;
   justify-content: center;
   align-items: center;
   border-radius: 20px; }
@@ -50,7 +49,11 @@ footer {
 footer h3 {
   font-family: "Titillium Web", sans-serif;
   color: white;
-  margin: 0; }
+  margin: 0;
+  font-size: 0.8em;
+  /* Tamaño de fuente más pequeño */
+  text-align: center;
+  /* Texto centrado horizontalmente */ }
 
 /*  ----------INICIO-----------  */
 #pagina_inicio_contenedor {
@@ -69,9 +72,9 @@ footer h3 {
   height: auto;
   background-color: #161A6C;
   color: white;
-  font-size: 24px;
   padding: 27px;
-  border-radius: 25px; }
+  border-radius: 25px;
+  font-size: 24px; }
 
 #pagina_inicio_contenedor_contenido {
   width: 90%;
@@ -80,26 +83,29 @@ footer h3 {
   height: auto;
   background-color: #161A6C;
   color: white;
+  padding: 110px;
+  border-radius: 25px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  padding: 110px;
-  font-size: 22px;
-  border-radius: 25px; }
-
-#pagina_inicio_contenedor_contenido img {
-  width: 400%;
-  border-radius: 50%; }
-
-#pagina_inicio_contenedor_contenido p {
-  display: flex;
   align-items: center;
   font-size: 22px; }
+  #pagina_inicio_contenedor_contenido img {
+    width: 400%;
+    border-radius: 50%; }
+  #pagina_inicio_contenedor_contenido p {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    font-size: 22px; }
 
 #pagina_inicio p {
   text-align: center;
   background-color: #07205F;
-  color: white; }
+  color: white;
+  padding: 0;
+  border-radius: 0; }
 
 #Body_De_Inicio {
   background-color: #0D152B; }
@@ -112,41 +118,43 @@ footer h3 {
     width: 97%;
     height: 50px;
     display: flex;
+    flex-direction: row;
     justify-content: center;
     align-items: center;
     background-color: #161A6C;
     color: white;
-    text-align: center;
-    border-radius: 25px; }
+    padding: 0;
+    border-radius: 25px;
+    text-align: center; }
   #pagina_habilidades #pagina_cuadro {
     margin-top: 80px;
     width: 90%;
     display: grid;
     grid-template-columns: repeat(4, auto);
     background-color: #2C3088;
+    color: inherit;
     padding: 20px;
-    margin: 0 auto;
-    border-radius: 25px; }
+    border-radius: 25px;
+    margin: 0 auto; }
 
 .grupo {
   display: flex;
-  align-items: center;
+  flex-direction: column;
   justify-content: center;
-  gap: 10px;
-  flex-direction: column; }
+  align-items: center;
+  gap: 10px; }
+  .grupo img {
+    width: 100px; }
+  .grupo a {
+    color: white;
+    text-align: center;
+    display: grid;
+    margin-top: 10px;
+    text-align: center; }
 
-.grupo img {
-  width: 100px; }
-
-.grupo a {
-  color: white;
-  text-align: center;
-  display: grid;
-  margin-top: 10px;
-  text-align: center; }
-
-#pagina_habilidades._contenido.curso {
+#pagina_habilidades_contenido.curso {
   display: flex;
+  flex-direction: row;
   justify-content: center;
   align-items: center;
   max-width: 80%;
@@ -183,6 +191,7 @@ footer h3 {
 
 .curso {
   background-color: #161A6C;
+  color: white;
   padding: 20px;
   border-radius: 40px;
   display: flex;
@@ -193,7 +202,6 @@ footer h3 {
   width: 600px;
   height: auto;
   margin: 20px auto;
-  color: white;
   font-size: 20px;
   text-align: left; }
   .curso img {
@@ -202,10 +210,10 @@ footer h3 {
 
 #upn, #udemy {
   background-color: #161A6C;
+  color: white;
   padding: 20px;
   border-radius: 40px;
   text-align: center;
-  color: white;
   margin-bottom: 80px;
   width: 80%;
   max-width: 600px;
@@ -214,14 +222,17 @@ footer h3 {
 /* --------------Pagina Experiencia----------- */
 #Body_De_Experiencia {
   background-color: #0D152B;
-  color: white; }
+  color: white;
+  padding: 0;
+  border-radius: 0; }
 
 #pagina_experiencia_titulo {
   background-color: #0D152B;
   color: white;
+  padding: 10px 0 0 0;
+  border-radius: 0;
   width: 100%;
   height: 60px;
-  padding-top: 10px;
   text-align: center;
   font-size: 24px;
   margin-bottom: 30px;
@@ -236,13 +247,12 @@ footer h3 {
   grid-gap: 30px;
   justify-content: center;
   align-items: center; }
-
-#pagina_experiencia_contenedor > div {
-  background-color: #2C3088;
-  padding: 20px;
-  border-radius: 25px;
-  text-align: center;
-  color: white; }
+  #pagina_experiencia_contenedor > div {
+    background-color: #2C3088;
+    color: white;
+    padding: 20px;
+    border-radius: 25px;
+    text-align: center; }
 
 #pagina_experiencia_contenedor h2,
 #pagina_experiencia_contenedor p,
@@ -261,17 +271,22 @@ footer h3 {
 
 #cuadro-interior {
   background-color: #2C3088;
-  padding: 100px; }
+  color: inherit;
+  padding: 100px;
+  border-radius: 0; }
 
 #cuadro-interior-mas-chico {
   background-color: #221667;
+  color: inherit;
   padding: 20px;
   border-radius: 20px; }
 
 /*  -------CONTACTO--------- */
 #Body_De_contacto {
   background-color: #0D152B;
-  color: white; }
+  color: white;
+  padding: 0;
+  border-radius: 0; }
 
 #pagina_contacto_titulo_parrafo,
 #pagina_contacto_titulo {
@@ -281,44 +296,45 @@ footer h3 {
 
 #pagina_contacto_titulo {
   background-color: #0D152B;
+  color: white;
+  padding: 10px 0 0 0;
+  border-radius: 0;
   width: 100%;
-  height: 60px;
-  padding-top: 10px; }
+  height: 60px; }
 
 #pagina_contenedor_contacto {
   width: 80%;
   background-color: #464C63;
+  color: inherit;
+  padding: 0;
+  border-radius: 25px;
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
-  margin: 40px auto;
-  border-radius: 25px; }
+  margin: 40px auto; }
 
 #formularioContacto {
   width: 80%;
   margin: 40px auto; }
-
-#formularioContacto div {
-  margin-bottom: 30px; }
-
-#formularioContacto label {
-  display: block;
-  margin-bottom: 10px; }
-
-#formularioContacto input[type="email"],
-#formularioContacto textarea {
-  width: 100%;
-  padding: 10px;
-  box-sizing: border-box;
-  border: none;
-  border-radius: 5px; }
-
-#formularioContacto input[type="submit"] {
-  background-color: #0D152B;
-  color: white;
-  border: none;
-  padding: 10px 20px;
-  cursor: pointer; }
+  #formularioContacto div {
+    margin-bottom: 30px; }
+  #formularioContacto label {
+    display: block;
+    margin-bottom: 10px; }
+  #formularioContacto input[type="email"],
+  #formularioContacto textarea {
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    border: none;
+    border-radius: 5px; }
+  #formularioContacto input[type="submit"] {
+    background-color: #0D152B;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 0;
+    cursor: pointer; }
 
 @media screen and (max-width: 320px) {
   nav ul {
