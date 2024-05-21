@@ -29,7 +29,7 @@
                     <a href="https://www.linkedin.com/in/michael-querevalú-138b08285/" target="_blank">Mi linkedin Personal</a></p>
             </div>
             <div id="pagina_contenedor_contacto">   
-                <form id="formularioContacto" action="*" method="post">
+                <form id="formularioContacto" onsubmit="enviarCorreo(event)">
                     <div class="campo-formulario">
                         <label for="correoElectronico">Correo electrónico:</label>
                         <input type="email" id="correoElectronico" name="correoElectronico" required>
@@ -48,5 +48,16 @@
     <footer>
         <h3> © 2024 Michael Querevalu. All rights reserved. | Todos los derechos reservados 2024.</h3>
     </footer>
+
+    <script>
+        function enviarCorreo(event) {
+            event.preventDefault();
+            const hotmail = document.getElementById('correoElectronico').value;
+            const mensaje = document.getElementById('mensaje').value;
+            const contacto = "Contacto desde el sitio web";
+            const mailtoLink = `mailto:michaelquerevalu@outlook.com?subject=${encodeURIComponent(contacto)}&body=${encodeURIComponent('Correo electrónico: ' + hotmail + '\n\nMensaje:\n' + mensaje )}`;
+            window.location.href = mailtoLink;
+        }
+    </script>
 </body>
 </html>
